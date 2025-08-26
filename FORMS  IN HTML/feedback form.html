@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+       input{
+        border:1px outset black;
+       }
+       li{
+        margin: 10px;
+       }
+       body{
+        display: flex;
+        align-items: center;
+       }
+       .container{
+        border: 2px solid black;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Registration Form</h1>
+    <form action="#">
+        <ul>
+            <li>
+                <label for="name">Name :</label>
+                <input type="text" id="name" placeholder="Enter your name here">                            
+            </li>
+            <li>
+                <label for="mail">Email :</label>
+                <input type="email" id="mail" placeholder="Enter your Email here"> 
+            </li>
+            <li>
+                <label for="pass">Password :</label>
+                <input type="password" id="pass" placeholder="Enter your password here"> 
+            </li>
+            <li>
+                Please check all the emotions that apply to you :
+                <ul>
+                    <li> 
+                        <label for="angry">Angry</label>
+                        <input type="checkbox" name="emotions" id="angry">
+                    </li>
+                    <li>
+                        <label for="sad">Sad</label>
+                        <input type="checkbox" name="emotions" id="sad">
+                    </li>
+                    <li>
+                        <label for="hppy">Happy</label>
+                        <input type="checkbox" name="emotions" id="hppy">
+                    </li>
+                    <li>
+                        <label for="Ambi">Ambivalent</label>
+                        <input type="checkbox" name="emotions" id="Ambi">
+                    </li>
+                </ul>
+            </li>
+                <li>
+                    How satisfied were you with our service?
+                    <ul>
+                        <li> 
+                            <label for="very">Very Satisfied</label>
+                            <input type="radio" name="emotions" id="very">
+                        </li>
+                        <li>
+                            <label for="sat">Satisfied</label>
+                            <input type="radio" name="emotions" id="sat">
+                        </li>
+                        <li>
+                            <label for="didnt">Didn't Care</label>
+                            <input type="radio" name="emotions" id="didnt">
+                        </li>
+                        <li>
+                            <label for="dis">Dissatisfied</label>
+                            <input type="radio" name="emotions" id="dis">
+                        </li>
+                        <li>
+                            <label for="v-dis"> VeryDissatisfied</label>
+                            <input type="radio" name="emotions" id="v-dis">
+                        </li>
+                    </li>
+              </ul>
+              <li>
+                <li>
+                    <label for="cmmnt">Furthur comments :</label>
+                    <textarea id="cmmnt" cols="20" rows="2"></textarea>
+                </li>
+                <li>
+                    <label for="bio">Bio Photo:</label>
+                    <input type="file" id="bio">
+                </li>
+              </li>
+        </ul>
+    </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <style>
+    body {
+            font-family: 'Verdana', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            font-family: 'Georgia', serif;
+            color: #4CAF50;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .radio-group, .checkbox-group {
+            margin-bottom: 15px;
+        }
+
+        .radio-group label, .checkbox-group label {
+            display: inline-block;
+            margin-right: 15px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Registration Form</h2>
+        <form action="/submit">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name">
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+          <label for="email">E-mail ID:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email"  required>
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Enter your Phone Number" required>
+
+          <label>Sex:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="sex" value="male" required> Male</label>
+                <label><input type="radio" name="sex" value="female"> Female</label>
+                <label><input type="radio" name="sex" value="other"> Other</label>
+            </div>
+
+            <label>Date of Birth:</label>
+            <div>
+                <select name="dob_day" required>
+                    <option value="" disabled selected>Day</option>
+                    <script>
+                        for (let i = 1; i <= 31; i++) {
+                            document.write(<option value="${i}">${i}</option>);
+                        }
+                    </script>
+                </select>
+                <select name="dob_month" required>
+                  <option value="" disabled selected>Month</option>
+                  <option value="January">January</option>
+                  <option value="February">February</option>
+                  <option value="March">March</option>
+                  <option value="April">April</option>
+                  <option value="May">May</option>
+                  <option value="June">June</option>
+                  <option value="July">July</option>
+                  <option value="August">August</option>
+                  <option value="September">September</option>
+                  <option value="October">October</option>
+                  <option value="November">November</option>
+                  <option value="December">December</option>
+              </select>
+              <select name="dob_year" required>
+                <option value="" disabled selected>Year</option>
+                <script>
+                    const currentYear = new Date().getFullYear();
+                    for (let i = 1900; i <= currentYear; i++) {
+                        document.write(<option value="${i}">${i}</option>);
+                    }
+                </script>
+            </select>
+        </div>
+        <label>Languages Known:</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="languages" value="English"> English</label>
+            <label><input type="checkbox" name="languages" value="Telugu"> Telugu</label>
+            <label><input type="checkbox" name="languages" value="Hindi"> Hindi</label>
+            <label><input type="checkbox" name="languages" value="Tamil"> Tamil</label>
+        </div>
+        <label for="address">Address:</label>
+        <textarea id="address" placeholder="Enter your full address"></textarea>
+          </form>
+
+  </div>
+</body>
+</html>

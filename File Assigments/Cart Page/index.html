@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart Page</title>
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    table{
+      border: 1.5px solid black;
+      border-collapse: collapse;
+      text-align: center;
+      width: 100%;
+      padding: 6px;
+    }
+    td{
+      padding: 5px;
+    }
+    .noborder{
+      border: none;
+     }
+    .amount{
+      display: flex;
+      justify-content: space-between;
+     }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <table border="3px solid black">
+     <tr>
+      <td>Logo</td>
+      <td colspan="4">Web site Name</td>
+     </tr>
+     <tr>
+      <td>Home</td>
+      <td>Login</td>
+      <td>Registration</td>
+      <td>Catalogue</td>
+      <td>Cart</td>
+     </tr>
+     <tr>
+       <td>
+        <p>CSE</p>
+        <p>ECE</p>
+        <p>EEE</p>
+        <p>CIVIL</p>
+    </td>
+    <td class="noborder">
+      <p>Book name</p>
+      <p>Java 2</p>
+      <p>XML bible</p>
+      <p>Total amount</p>
+    </td>
+    <td class="noborder amount">
+      <div class="sameLine">
+        <p>Price</p>
+        <p>$35.5</p>
+        <p>$40.5</p>
+        <p>-$130.5</p>
+      </div>
+      <div class="sameLine">
+        <p>Quantity</p>
+        <p>2</p>
+        <p>1</p>
+      </div>
+    </td>
+    <td class="noborder">
+      <p>Amount</p>
+      <p>$70</p>
+      <p>$40.5</p>
+      <p style="visibility: hidden;">--</p>
+    </td>
+    </tr>
+
+    </table>
+  </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Making</title>
+    <style>
+        .in-box{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <div class="in-box">
+        <label for="name">username:</label>
+        <input type="text" id="name" placeholder="Enter your name here">
+        </div>
+        <div class="in-box">
+        <label for="pass">password</label>
+        <input type="password" id="pass" placeholder="Enter your password">
+        </div> 
+        <div class="in-box">
+            <label for="course">Select one of the following courses</label>
+            <input type="radio" name="c1" id="course" value="HTML">1.HTML
+            <input type="radio" name="c1" id="course" value="CSS">2.CSS
+        </div>
+        <div class="in-box">
+            <label for="department"></label>
+            <select name="depart" id="department">
+                <option value="CSE-DS">CSE-DS</option>
+                <option value="CSE-AIML">CSE-AIML</option>
+                <option value="CSE-AI">CSE-AI</option>
+            </select>
+        </div>
+        <div class="in-box">
+        <input type="submit">
+        </div>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,50 @@
+body{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.container{
+  padding: 0;
+  margin: 0;
+}
+
+.head{
+  display: flex;
+  justify-content: space-between;
+  background-color: skyblue;
+}
+
+.logo-container{
+  height: 50px;
+  width: 50px;
+  margin: 14px;
+}
+
+img{
+  height: 100%;
+  width: 100%;
+}
+
+navbar{
+  display: flex;
+  justify-content: space-around;
+  margin: 14px;
+  width: 30%;
+  background-color: steelblue;
+  border: 0.5px solid aquamarine;
+  align-items: center;
+  border-radius: 24px;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+@media screen and (max-width: 900px) {
+  .head{
+    display: block;
+  }
+}

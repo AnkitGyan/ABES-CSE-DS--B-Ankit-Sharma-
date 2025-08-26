@@ -1,0 +1,19 @@
+div{
+  width: 100px;
+  height: 100px;
+  background-color: cyan;
+  border: 2px solid darkcyan;
+  animation-name: box;
+  /* transition-property: all;
+  transition-duration: 2s;
+  transition-timing-function: linear; */
+}
+
+/* div:hover{
+  width: 300px;
+  height: 300px;
+} */
+
+@keyframes box{
+  
+}

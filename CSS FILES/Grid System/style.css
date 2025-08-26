@@ -1,0 +1,26 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  border: 2px solid red;
+  display: grid;
+  /* grid-template-columns: 100px 100px 100px; */
+  gap: 10px;
+  /* grid-template-columns: 1fr 1fr 2fr; */
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-rows: 100px; */
+}
+
+.box{
+  border: 2px solid black;
+}
+
+#box1{
+  /* grid-column-start:1 ;
+  grid-column-end: 3; */
+  /* grid-column: 1/4; */
+  grid-row: 1/3;
+}
