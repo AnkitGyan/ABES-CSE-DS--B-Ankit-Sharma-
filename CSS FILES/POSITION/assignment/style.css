@@ -1,0 +1,56 @@
+.container{
+  height: 500px;
+  width: 500px;
+  position: relative;
+  background-color: antiquewhite;
+}
+div{
+  height: 100px;
+  width: 100px;
+}
+.red{
+  background-color: red;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100px;
+  width: 100px;
+}
+
+.green{
+  background-color: red;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 100px;
+  width: 100px;
+}
+
+.blue{
+  background-color: blue;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 100px;
+  width: 100px;
+  
+}
+
+.grey{
+  background-color: gray;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  height: 100px;
+  width: 100px;
+}
+
+.skyblue{
+  background-color: seagreen;
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  left: 200px;
+  top: 200px;
+}
+

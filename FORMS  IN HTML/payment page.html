@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <style>
+    table{ 
+        background-color:rgb(179, 220, 98);
+        border: none;
+        border-radius: 10px;
+    }
+    tr{
+       width: 200px;
+
+    }
+    div{
+        border-radius:10px ;
+        background-color: rgb(255,255,255,0.5);
+        border: 1px outset white;
+        margin: 5px 40px;
+
+    }
+    input{
+        margin: 20px 50px;
+       
+    }
+    label,h4{
+        margin-left: 10px;
+    }
+    h2{
+        margin-left: 40px;
+    }
+    button{
+        width: 120px;
+        height: 40px;
+        border: none;
+        background-color: black;
+        color: rgb(239, 234, 227);
+        border-radius: 25px;
+        
+    }
+    img{
+        height: 13px;
+        width: 30px;
+    }
+    .card{
+        margin-right: 2px;
+        margin-left: 5px;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+    }
+    #btn{
+        display: flex;
+        justify-content: center;
+    }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <h2>Step 1:Your details</h2>
+                <div class="Detail-ele">
+                    <label id="name"><b>Name</b></label>
+                    <input type="text" id="name" placeholder="First and last name">
+                </div>
+                <div class="Detail-ele">
+                    <label id="mail"><b>Email</b></label>
+                    <input type="email" id="name" placeholder="Enter your Email here">
+                </div>
+                <div class="Detail-ele">
+                    <label id="phone"><b>Phone</b></label>
+                    <input type="tel" id="phone" placeholder="Enter contact here">
+                </div>
+            </td>
+            </tr>
+            <tr>
+            <td>
+                <h2>Step 2:Delivery Address</h2>
+                <div class="Detail-ele">
+                    <label for="address" style="vertical-align: top;"><b>Address</b></label>
+                    <textarea id="adress" name="adress" rows="5" cols="22" style="margin: 10px 50px;">
+                    </textarea>
+                </div>
+                <div class="Detail-ele">
+                    <label id="pin"><b>Pin code</b></label>
+                    <input type="pin" id="pin" placeholder="Enter your pin-code here">
+                </div>
+                <div class="Detail-ele">
+                    <label id="country"><b>Country</b></label>
+                    <input type="text" id="country" placeholder="Enter country">
+                </div>
+            </td>
+        </tr>
+        <td>
+            <h2>Step 3:Card Details</h2>
+            <div class="Detail-ele">
+                <h4>Card</h4>
+                <input type="radio" id="visa" name="cards" value="Visa"  class="card">
+                <lable for="visa"><img src="images/images.jpeg">Visa</lable>
+                <input type="radio" id="visa" name="cards" value="Visa"  class="card">
+                <lable for="visa"><img src="images/download.png">American</lable>
+                <input type="radio" id="Master" name="cards" value="MasterCard"  class="card">
+                <lable for="Master"><img src="images/MClogo-c823e495c5cf455c89ddfb0e17fc7978.jpg">MasterCard</lable>
+            </div>
+            <div class="Detail-ele">
+                <label id="num"><b>Number</b></label>
+                <input type="tel" id="num" placeholder="Enter your card number">
+            </div>
+            <div class="Detail-ele">
+                <label id="card-name"><b>Name</b></label>
+                <input type="text" id="card-name" placeholder="Exact name on the card">
+            </div>
+            <tr>
+                <td id="btn"><button>BUY IT!</button></td>
+            </tr>
+        </td>
+    </table>
+</body>
+</html>

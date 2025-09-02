@@ -34,7 +34,11 @@
   border: 1px solid gray;
   text-align: center;
   position: relative;
+<<<<<<< HEAD
   top: px;
+=======
+  top: 200px;
+>>>>>>> 6f18e423dee6ed082410923cecac6378c6f07574
 }
 .footer{
   height: 150px;

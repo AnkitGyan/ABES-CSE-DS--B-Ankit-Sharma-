@@ -3,6 +3,7 @@ div{
   height: 100px;
   background-color: cyan;
   border: 2px solid darkcyan;
+<<<<<<< HEAD
   transition-property: width ;
   transition-duration: 2s;
   transition-timing-function: linear;
@@ -10,4 +11,19 @@ div{
 
 div:hover{
   width: ;
+=======
+  animation-name: box;
+  /* transition-property: all;
+  transition-duration: 2s;
+  transition-timing-function: linear; */
+}
+
+/* div:hover{
+  width: 300px;
+  height: 300px;
+} */
+
+@keyframes box{
+  
+>>>>>>> 6f18e423dee6ed082410923cecac6378c6f07574
 }

@@ -1,0 +1,16 @@
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+#hero {
+  background: url('https://via.placeholder.com/1920x1080') center/cover no-repeat;
+}
+
+.card {
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
