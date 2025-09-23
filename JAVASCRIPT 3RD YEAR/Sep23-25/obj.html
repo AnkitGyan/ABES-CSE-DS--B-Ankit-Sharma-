@@ -8,11 +8,11 @@
 <body>
   <p id="ank"></p>
   <script>
-    const person = {
+    const person = new Object({
       firstname : "ankit",
       lastname : "sharma",
       age : 21
-    }
+    })
     person.age = 22;
     document.querySelector("#ank").innerHTML = person.age;
   </script>
