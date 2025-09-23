@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Cards</title>
+    <style>
+        .card-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 40px;
+            justify-content: center;
+        }
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+        }
+        .card h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .student-list {
+            list-style: none;
+            padding: 0;
+        }
+        .student-list li {
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="card" id="itCard">
+            <h2>IT Branch Students</h2>
+            <ul class="student-list" id="it-list"></ul>
+        </div>
+        <div class="card" id="other-card">
+            <h2>Other Branch Students</h2>
+            <ul class="student-list" id="other-list"></ul>
+        </div>
+    </div>
+
+    <script>
+        const students = [
+            { name: "Amit Sharma", roll: "IT101", branch: "IT", year: "2nd" },
+            { name: "Priya Singh", roll: "IT102", branch: "IT", year: "2nd" },
+            { name: "Rahul Verma", roll: "IT103", branch: "IT", year: "2nd" },
+            { name: "Sneha Gupta", roll: "CS201", branch: "CSE", year: "2nd" },
+            { name: "Vikas Yadav", roll: "EC301", branch: "ECE", year: "2nd" }
+        ];
+
+        const itStudents = students.filter(s => s.branch === "IT");
+        const otherStudents = students.filter(s => s.branch !== "IT");
+
+        const itList = document.getElementById('it-list');
+        itStudents.forEach(student => {
+            const li = document.createElement('li');
+            li.innerHTML = `<strong>${student.name}</strong><br>
+                                            Roll: ${student.roll}<br>
+                                            Branch: ${student.branch}<br>
+                                            Year: ${student.year}`;
+            itList.appendChild(li);
+        });
+
+        const otherList = document.getElementById('other-list');
+        otherStudents.forEach(student => {
+            const li = document.createElement('li');
+            li.innerHTML = `<strong>${student.name}</strong><br>
+                                            Roll: ${student.roll}<br>
+                                            Branch: ${student.branch}<br>
+                                            Year: ${student.year}`;
+            otherList.appendChild(li);
+        });
+    </script>
+</body>
+</html>
