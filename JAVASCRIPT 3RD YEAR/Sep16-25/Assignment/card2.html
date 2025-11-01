@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Two Cards</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      background: #f4f6f8;
+      font-family: Arial, sans-serif;
+    }
+    .card {
+      width: 400px;
+      height: 400px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 4px 16px rgba(20, 20, 20, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .card button {
+      height: 30%;
+      border: none;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      background: #ff4646;
+      color: #fff;
+      transition: background 0.2s;
+    }
+    .card button:hover {
+      background: #97c9fb;
+    }
+  </style>
+</head>
+<body>
+  <!-- Card 1: Hide -->
+  <div class="card">
+    <img id="img1" src="img1" alt="Image 1">
+    <button id="hideBtn">Hide</button>
+  </div>
+
+  <!-- Card 2: Change -->
+  <div class="card">
+    <img id="img2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR6DRD5G9pU8_DhlWpWsNiyQPDPfEn1VwpGw&s" alt="Image 2">
+    <button id="changeBtn">Change</button>
+  </div>
+
+  <script>
+    const img1 = document.getElementById("img1");
+    const hideBtn = document.getElementById("hideBtn");
+
+    hideBtn.addEventListener("click", () => {
+      if (img1.style.visibility === "hidden") {
+        img1.style.visibility = "visible";
+        hideBtn.textContent = "Hide";
+      } else {
+        img1.style.visibility = "hidden";
+        hideBtn.textContent = "Show";
+      }
+    });
+
+    const img2 = document.getElementById("img2");
+    const changeBtn = document.getElementById("changeBtn");
+    let toggle = true;
+
+    changeBtn.addEventListener("click", () => {
+      if (toggle) {
+        img2.src = "img3.jpg";
+      } else {
+        img2.src = "img4.jpg";
+      }
+      toggle = !toggle;
+    });
+  </script>
+</body>
+</html>

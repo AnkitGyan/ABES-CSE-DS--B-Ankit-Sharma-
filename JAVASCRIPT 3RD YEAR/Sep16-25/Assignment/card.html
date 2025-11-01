@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Counter Card</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .card {
+      border: none;
+      width: 280px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 20px;
+      text-align: center;
+    }
+
+
+    .navbar {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .logo {
+      font-size: 18px;
+      font-weight: bold;
+      color: purple;
+    }
+
+    .navbar h3 {
+      margin: 0;
+      color: black;
+    }
+
+    .count {
+      margin: 20px 0;
+    }
+
+    .count h3 {
+      font-size: 40px;
+      margin: 10px 0;
+      color: #222;
+    }
+
+    .dec-limit, .inc-limit {
+      color: gray;
+      font-size: 14px;
+      margin: 5px 0;
+      padding: 4px;
+      border-radius: 6px;
+    }
+
+    .button {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .cal {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 12px;
+      font-size: 15px;
+      cursor: pointer;
+      background: #6b16c5;
+      color: white;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="navbar">
+      <div class="logo">+/-</div>
+      <h3>Counter</h3>
+    </div>
+
+    <div class="count">
+      <p class="dec-limit">Hit min limit</p>
+      <h3 id="counter">0</h3>
+      <p class="inc-limit">Hit max limit</p>
+    </div>
+
+    <div class="button">
+      <button class="cal" onclick="calculate(num - 1)">Decrease</button>
+      <button class="cal" onclick="calculate(num + 1)">Increase</button>
+    </div>
+  </div>
+
+<script>
+  let num = 0;
+
+  function calculate(newNum) {
+    num = newNum;
+    document.querySelector(".dec-limit").style.background = "transparent";
+    document.querySelector(".inc-limit").style.background = "transparent";
+
+    if (num > 10) {
+      num = 10;
+      document.querySelector(".inc-limit").style.background = "red";
+    } else if (num < 0) {
+      num = 0;
+      document.querySelector(".dec-limit").style.background = "red";
+    }
+    document.getElementById("counter").innerText = num;
+  }
+</script>
+</body>
+</html>

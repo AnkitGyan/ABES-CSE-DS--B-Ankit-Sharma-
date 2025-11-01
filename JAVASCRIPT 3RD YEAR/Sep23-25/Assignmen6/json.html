@@ -16,10 +16,6 @@
             padding: 20px;
             width: 300px;
         }
-        .card h2 {
-            margin-top: 0;
-            color: #333;
-        }
         .student-list {
             list-style: none;
             padding: 0;
@@ -29,6 +25,7 @@
             padding-bottom: 8px;
             border-bottom: 1px solid #eee;
         }
+        
     </style>
 </head>
 <body>
@@ -45,11 +42,11 @@
 
     <script>
         const students = [
-            { name: "Amit Sharma", roll: "IT101", branch: "IT", year: "2nd" },
-            { name: "Priya Singh", roll: "IT102", branch: "IT", year: "2nd" },
-            { name: "Rahul Verma", roll: "IT103", branch: "IT", year: "2nd" },
-            { name: "Sneha Gupta", roll: "CS201", branch: "CSE", year: "2nd" },
-            { name: "Vikas Yadav", roll: "EC301", branch: "ECE", year: "2nd" }
+            { name: "stu1", roll: "123", branch: "IT", year: "2nd" },
+            { name: "stu2", roll: "124", branch: "IT", year: "2nd" },
+            { name: "stu3", roll: "125", branch: "IT", year: "2nd" },
+            { name: "stu4", roll: "123", branch: "CSE", year: "2nd" },
+            { name: "stu5", roll: "123", branch: "DS", year: "2nd" }
         ];
 
         const itStudents = students.filter(s => s.branch === "IT");
@@ -58,7 +55,7 @@
         const itList = document.getElementById('it-list');
         itStudents.forEach(student => {
             const li = document.createElement('li');
-            li.innerHTML = `<strong>${student.name}</strong><br>
+            li.innerHTML = `<bold>${student.name}</bold><br>
                                             Roll: ${student.roll}<br>
                                             Branch: ${student.branch}<br>
                                             Year: ${student.year}`;
@@ -68,7 +65,7 @@
         const otherList = document.getElementById('other-list');
         otherStudents.forEach(student => {
             const li = document.createElement('li');
-            li.innerHTML = `<strong>${student.name}</strong><br>
+            li.innerHTML = `<bold>${student.name}</bold><br>
                                             Roll: ${student.roll}<br>
                                             Branch: ${student.branch}<br>
                                             Year: ${student.year}`;
