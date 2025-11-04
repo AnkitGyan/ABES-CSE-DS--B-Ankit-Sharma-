@@ -10,7 +10,7 @@ function Navbar(){
           height={40}
           width={40}
         />
-        <h2>Chimpanzee World 🐵</h2>
+        <h2>Animal World 🐵</h2>
       </div>
       <ul className="nav-links">
         <li>Home</li>
